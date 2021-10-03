@@ -1,0 +1,131 @@
+<html>
+<head>
+  	<meta http-equiv="refresh" content="700">
+  	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+	<title>Suryansh Singh Portfolio</title>
+
+	<style type="text/css">
+		body{
+			margin: 0px;
+			font-family: 'Open Sans', sans-serif;
+			background-image:url("assets/images/background-image.jpg");
+			background-repeat : no-repeat;
+			background-size: 100% auto;
+		}
+
+		#main-heading{
+			color: #ffffff;
+			font-size: 45px;
+			margin-top: 15%;
+			margin-left: 50px;
+			min-height: 500px;
+		}
+
+		ul {
+		  list-style-type: none;
+		  margin: 0;
+		  padding: 0;
+		  overflow: hidden;
+		  background-color: #333;
+		}
+
+		li {
+		  float: left;
+		}
+
+		li a {
+		  display: block;
+		  color: white;
+		  text-align: center;
+		  padding: 14px 16px;
+		  text-decoration: none;
+		}
+
+		li a:hover {
+			color: #000000;
+		  	background-color: #ffffff;
+		}
+	</style>
+</head>
+<body >
+	
+	<ul>
+	  	<li><a href="#home">Home</a></li>
+		<li><a href="#about">About</a></li>
+		<li><a href="#projects">Projects</a></li>
+	  	<li><a href="#skills">Skills</a></li>
+	  	<li><a href="#resume">Resume</a></li>
+	 	<li><a href="#contact">Contact</a></li>
+	</ul>
+
+	<h1 id="main-heading"></h1>
+
+
+	<div id="about" style=" background-image:url('assets/images/jby.jpg'); height:1000px; ">
+			
+			<h2 style="color:#ffffff">All you should know about me</h2>
+			<p> Hello Sir,
+				I am Suryansh Singh, born in 2002, raised in the city of TAJ.  
+
+	</div>
+	<h1 id="main-heading"></h1>
+
+
+	<div id="projects" style="margin-top: 5%;">
+		<img src="assets/images/project.jpg" alt="image of projects" width="1600" height="auto">
+
+	</div>
+	<h1 id="main-heading"></h1>
+
+
+	<div id="skills" style="margin-top: 5%;">
+		<img src="assets/images/skills.jpg" alt="skills" width="1600" height="auto">
+
+	</div>
+     <h1 id="main-heading"></h1>
+
+
+	<div id="resume" style="margin-top: 5%;">
+		<img src="assets/images/resume.jpg" alt="resume image" width="1600" height="auto">
+
+	</div>
+	  <h1 id="main-heading"></h1>
+
+
+	<div id="contact" style="margin-top: 5%;">
+		<img src="assets/images/contact info.jpg" alt="contact information" width="1600" height="auto">
+
+	</div>
+
+
+	
+
+	</div>
+
+	<script type="text/javascript">
+		var mainHeadingText = "Hi, I am Suryansh Singh!, Welcome to my portfolio."
+		var currentIndex = 0
+		scheduleTypeText();
+
+		function typeText(){
+			console.log("currentIndex - "+currentIndex + " mainHeading - "+mainHeadingText.length)
+			if(mainHeadingText.length>currentIndex){
+				if(currentIndex==24){
+					document.getElementById("main-heading").innerHTML =  document.getElementById("main-heading").innerHTML + "<br>"
+				}else{
+					document.getElementById("main-heading").innerHTML = document.getElementById("main-heading").innerHTML +  mainHeadingText[currentIndex]	
+				}
+				
+				currentIndex++;
+				scheduleTypeText()
+			}
+		}
+
+		function scheduleTypeText(){
+			setTimeout(typeText, 100);
+		}
+	</script>
+</body>
+</html>
